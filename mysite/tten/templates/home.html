@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% load staticfiles %} {% block style %} .footer {
+padding: 30px; text-align:center; background: #ddd; margin-top: 20px; } *{
+box-sizing: border-box; } .column { float: left; width: 33.33%; padding: 5px; }
+/* Clearfix (clear floats) */ .row::after { content: ""; clear: both; display:
+table; } {%endblock %} {%block content %}
+
+<br /><br />
+
+<div style="margin-left: 10px;">
+  <img
+    class="img-responsive"
+    alt="Responsive image"
+    src="https://scontent.fdac23-1.fna.fbcdn.net/v/t1.0-9/s960x960/75303679_2462339327341899_6611814028605915136_o.jpg?_nc_cat=109&_nc_oc=AQnRjeVFuGc6_3Exvd1n2EUTA0f9Vloyn3RiaVvZ8kEe9tC8KeWkW1q9917yNJmTmzg&_nc_ht=scontent.fdac23-1.fna&oh=d712e816e2ba34fa1f07434798d3b198&oe=5E483AEE"
+  />
+</div>
+<br />
+
+<h1>Get ready for the biggest event of Cricket at UIU</h1>
+<h2>Starts from 17th November</h2>
+<br /><br />
+
+<div class="row">
+  <div class="column">
+    <img src="{% static 'uiu.png' %}" alt="" style="width:70%;  " />
+  </div>
+  <div class="column">
+    <img src="{% static 'dsa.png' %}" alt="" style="width:90%;" />
+  </div>
+  <div class="column">
+    <img src="{% static 'Sclogo.png' %}" alt="" style="width:80%" />
+  </div>
+</div>
+
+{% endblock content %} {% block extracontent %}
+<div class="footer" style="background-color: #3d3d3d;">
+  <span style="color:#ff9f1a ;" class="glyphicon glyphicon-copyright-mark"
+    >Jadir Ibna Hasan</span
+  >
+</div>
+{% endblock %}

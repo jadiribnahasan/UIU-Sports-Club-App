@@ -1,0 +1,252 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<h1>Live Update</h1>
+
+{% if inningss %} {% for innings in inningss %}
+
+<h2>{{ innings.battingTeam }} VS {{ innings.bowlingTeam }}</h2>
+
+<h4>{{ innings.match_time }}</h4>
+<h2>{{ innings.battingTeam }}s innings :</h2>
+<div class="table-responsive">
+  <table class="table table-boarded">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Batsman</th>
+        <th></th>
+        <th>R</th>
+        <th>B</th>
+        <th>4s</th>
+        <th>6s</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ innings.batsman1name }}</td>
+        <td>{{ innings.batsman1status }}</td>
+        <td>{{ innings.batsman1run }}</td>
+        <td>{{ innings.batsman1BallPlayed }}</td>
+        <td>{{ innings.batsman1Four }}</td>
+        <td>{{ innings.batsman1Six }}</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>{{ innings.batsman2name }}</td>
+        <td>{{ innings.batsman2status }}</td>
+        <td>{{ innings.batsman2run }}</td>
+        <td>{{ innings.batsman2BallPlayed }}</td>
+        <td>{{ innings.batsman2Four }}</td>
+        <td>{{ innings.batsman2Six }}</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>{{ innings.batsman3name }}</td>
+        <td>{{ innings.batsman3status }}</td>
+        <td>{{ innings.batsman3run }}</td>
+        <td>{{ innings.batsman3BallPlayed }}</td>
+        <td>{{ innings.batsman3Four }}</td>
+        <td>{{ innings.batsman3Six }}</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>{{ innings.batsman4name }}</td>
+        <td>{{ innings.batsman4status }}</td>
+        <td>{{ innings.batsman4run }}</td>
+        <td>{{ innings.batsman4BallPlayed }}</td>
+        <td>{{ innings.batsman4Four }}</td>
+        <td>{{ innings.batsman4Six }}</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>{{ innings.batsman5name }}</td>
+        <td>{{ innings.batsman5status }}</td>
+        <td>{{ innings.batsman5run }}</td>
+        <td>{{ innings.batsman5BallPlayed }}</td>
+        <td>{{ innings.batsman5Four }}</td>
+        <td>{{ innings.batsman5Six }}</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>{{ innings.batsman6name }}</td>
+        <td>{{ innings.batsman6status }}</td>
+        <td>{{ innings.batsman6run }}</td>
+        <td>{{ innings.batsman6BallPlayed }}</td>
+        <td>{{ innings.batsman6Four }}</td>
+        <td>{{ innings.batsman6Six }}</td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>{{ innings.batsman7name }}</td>
+        <td>{{ innings.batsman7status }}</td>
+        <td>{{ innings.batsman7run }}</td>
+        <td>{{ innings.batsman7BallPlayed }}</td>
+        <td>{{ innings.batsman7Four }}</td>
+        <td>{{ innings.batsman7Six }}</td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>{{ innings.batsman8name }}</td>
+        <td>{{ innings.batsman8status }}</td>
+        <td>{{ innings.batsman8run }}</td>
+        <td>{{ innings.batsman8BallPlayed }}</td>
+        <td>{{ innings.batsman8Four }}</td>
+        <td>{{ innings.batsman8Six }}</td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>{{ innings.batsman9name }}</td>
+        <td>{{ innings.batsman9status }}</td>
+        <td>{{ innings.batsman9run }}</td>
+        <td>{{ innings.batsman9BallPlayed }}</td>
+        <td>{{ innings.batsman9Four }}</td>
+        <td>{{ innings.batsman9Six }}</td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>{{ innings.batsman10name }}</td>
+        <td>{{ innings.batsman10status }}</td>
+        <td>{{ innings.batsman10run }}</td>
+        <td>{{ innings.batsman10BallPlayed }}</td>
+        <td>{{ innings.batsman10Four }}</td>
+        <td>{{ innings.batsman10Six }}</td>
+      </tr>
+      <tr>
+        <th scope="row">11</th>
+        <td>{{ innings.batsman11name }}</td>
+        <td>{{ innings.batsman11status }}</td>
+        <td>{{ innings.batsman11run }}</td>
+        <td>{{ innings.batsman11BallPlayed }}</td>
+        <td>{{ innings.batsman11Four }}</td>
+        <td>{{ innings.batsman11six }}</td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td>Extra =</td>
+        <td>{{ innings.extra }}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td>Total =</td>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Bowler</th>
+        <th>O</th>
+        <th>R</th>
+        <th>W</th>
+        <th>Eco</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% if innings.bowler1name %}
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ innings.bowler1name }}</td>
+        <td>0.{{ innings.bowler1bowled }}</td>
+        <td>{{ innings.bowler1rungiven }}</td>
+        <td>{{ innings.bowler1wicket }}</td>
+      </tr>
+      {% endif %} {% if innings.bowler2name %}
+      <tr>
+        <th scope="row">2</th>
+        <td>{{ innings.bowler2name }}</td>
+        <td>0.{{ innings.bowler2bowled }}</td>
+        <td>{{ innings.bowler2rungiven }}</td>
+        <td>{{ innings.bowler2wicket }}</td>
+      </tr>
+      {% endif %}{% if innings.bowler3name %}
+      <tr>
+        <th scope="row">3</th>
+        <td>{{ innings.bowler3name }}</td>
+        <td>0.{{ innings.bowler3bowled }}</td>
+        <td>{{ innings.bowler3rungiven }}</td>
+        <td>{{ innings.bowler3wicket }}</td>
+      </tr>
+      {% endif %}{% if innings.bowler4name %}
+      <tr>
+        <th scope="row">4</th>
+        <td>{{ innings.bowler4name }}</td>
+        <td>0.{{ innings.bowler4bowled }}</td>
+        <td>{{ innings.bowler4rungiven }}</td>
+        <td>{{ innings.bowler4wicket }}</td>
+      </tr>
+      {% endif %} {% if innings.bowler5name %}
+      <tr>
+        <th scope="row">5</th>
+        <td>{{ innings.bowler5name }}</td>
+        <td>0.{{ innings.bowler5bowled }}</td>
+        <td>{{ innings.bowler5rungiven }}</td>
+        <td>{{ innings.bowler5wicket }}</td>
+      </tr>
+      {% endif %} {% if innings.bowler6name %}
+      <tr>
+        <th scope="row">6</th>
+        <td>{{ innings.bowler6name }}</td>
+        <td>0.{{ innings.bowler6bowled }}</td>
+        <td>{{ innings.bowler6rungiven }}</td>
+        <td>{{ innings.bowler6wicket }}</td>
+      </tr>
+      {% endif %}{% if innings.bowler7name %}
+      <tr>
+        <th scope="row">7</th>
+        <td>{{ innings.bowler7name }}</td>
+        <td>0.{{ innings.bowler7bowled }}</td>
+        <td>{{ innings.bowler7rungiven }}</td>
+        <td>{{ innings.bowler7wicket }}</td>
+      </tr>
+      {% endif %} {% if innings.bowler8name %}
+      <tr>
+        <th scope="row">8</th>
+        <td>{{ innings.bowler8name }}</td>
+        <td>0.{{ innings.bowler8bowled }}</td>
+        <td>{{ innings.bowler8rungiven }}</td>
+        <td>{{ innings.bowler8wicket }}</td>
+      </tr>
+      {% endif %} {% if innings.bowler9name %}
+      <tr>
+        <th scope="row">9</th>
+        <td>{{ innings.bowler9name }}</td>
+        <td>0.{{ innings.bowler9bowled }}</td>
+        <td>{{ innings.bowler9rungiven }}</td>
+        <td>{{ innings.bowler9wicket }}</td>
+      </tr>
+      {% endif %} {% if innings.bowler10name %}
+      <tr>
+        <th scope="row">10</th>
+        <td>{{ innings.bowler10name }}</td>
+        <td>0.{{ innings.bowler10bowled }}</td>
+        <td>{{ innings.bowler10rungiven }}</td>
+        <td>{{ innings.bowler10wicket }}</td>
+      </tr>
+      {% endif %} {% if innings.bowler11name %}
+      <tr>
+        <th scope="row">11</th>
+        <td>{{ innings.bowler11name }}</td>
+        <td>0.{{ innings.bowler11bowled }}</td>
+        <td>{{ innings.bowler11rungiven }}</td>
+        <td>{{ innings.bowler11wicket }}</td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>
+</div>
+{% endfor %} {% else %}
+<h1>No Live Match</h1>
+{% endif %} {% endblock content %}

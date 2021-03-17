@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div style="background-color: rgb(211, 192, 180); padding: 10px;">
+  <img
+    style="height: auto;"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRtxAMlD4UPmzN79ZAfdZhIIrAXQkp1iQvg8-5g594apUifcUW2"
+  />
+  <h3 style="margin-left: 70px; color: rgb(108, 99, 189);">
+    {{ object.name }}
+  </h3>
+  <h4 style="margin-left: 70px;">{{ object.role }}</h4>
+  <h4 style="margin-left: 70px;">{{ object.department }}</h4>
+</div>
+<div style=" padding: 10px; margin-top: 20px; background-color: #bdc3c7;">
+  <h3>Match Played : {{ object.played }}</h3>
+  <h3>Run : {{ object.run }}</h3>
+  <h3>Wicket : {{ object.wicket }}</h3>
+</div>
+{% endblock %}

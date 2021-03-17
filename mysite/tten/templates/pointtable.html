@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<h1>Point Table</h1>
+<br /><br />
+
+<div
+  class="table-responsive"
+  style="background-color: #218c74; border-radius: 10px;"
+>
+  <table class="table table-boarded" style="font-size: large;">
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th>Match</th>
+        <th>Win</th>
+        <th>Lose</th>
+        <th>N/R</th>
+        <th>Point</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for team in teams %}
+      <tr>
+        <td>{{ team.teamName }}</td>
+        <td>{{ team.played }}</td>
+        <td>{{ team.won }}</td>
+        <td>{{ team.loss }}</td>
+        <td>{{ team.draw }}</td>
+        <td style="color: #f1eeee; font-family: Arial, Helvetica, sans-serif;">
+          {{ team.point }}
+        </td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}

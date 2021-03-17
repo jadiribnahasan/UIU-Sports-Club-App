@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<h1>Match History</h1>
+{% for match in matches %}
+<div style="padding: 20px; background-color: #7d5fff; border-radius:20px;">
+  <h2>{{ match.matchNo }}. {{ match.team1 }} Vs {{ match.team2 }}</h2>
+  <h3>
+    {{ match.team1 }}-{{ match.firstInningsRun }}/{{match.firstInningsWicket}}({{ match.firstInningsPlayed }})
+  </h3>
+  <h3>
+    {{ match.team2 }}-{{ match.secondInningsRun }}/{{match.secondInningsWicket}}({{ match.secondInningsPlayed }})
+  </h3>
+<h4>{{match.winning_status}}</h4>
+</div>
+{%endfor%} {% endblock %}

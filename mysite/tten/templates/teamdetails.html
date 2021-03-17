@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div style="background-color: bisque; padding: 10px;">
+  <h1
+    style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+  >
+    {{ team.teamName }}
+  </h1>
+  <p>Played - {{ team.played }}</p>
+  <p>Win - {{ team.won }}</p>
+  <p>Loss - {{ team.loss }}</p>
+  <p>Draw - {{ team.draw }}</p>
+  <p>Point - {{ team.point }}</p>
+</div>
+<div style="background-color: rgb(190, 231, 231); padding: 10px;">
+  <h3>Squad :</h3>
+  {% for player in players %}
+  <h3>
+    <a
+      style="text-decoration: none;"
+      href="{% url 'tten:PlayerDetails' pk=player.pk %}"
+      >{{ player }}</a
+    >
+  </h3>
+  {%endfor%}
+</div>
+{% endblock %}

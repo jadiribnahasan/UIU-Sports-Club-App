@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<h1>Fixture</h1>
+<br /><br />
+
+<div
+  class="table-responsive"
+  style="background-color: #8247b3; border-radius: 10px;"
+>
+  <table class="table table-boarded" style="font-size: large;">
+    <thead>
+      <tr>
+        <th>Date-time</th>
+        <th>Team</th>
+        <th>Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for fixture in fixtures %}
+      <tr>
+        <td>{{ fixture.matchTime }}</td>
+        <td>{{ fixture.team1 }}</td>
+        <td>{{ fixture.team2 }}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}

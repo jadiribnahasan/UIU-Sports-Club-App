@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<h1>Top Bowlers</h1>
+<br /><br />
+
+<div
+  class="table-responsive"
+  style="background-color: #ff5e57; border-radius: 10px;"
+>
+  <table class="table table-boarded" style="font-size: large;">
+    <thead>
+      <tr>
+        <th>Bowler</th>
+        <th>Played</th>
+        <th>Wicket</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for bowler in bowlers %}
+      <tr>
+        {% if bowler.wicket != 0 %}
+        <td>{{ bowler.name }}</td>
+        <td>{{ bowler.played }}</td>
+        <td>{{ bowler.wicket }}</td>
+        <td>{{ bowler.role }}</td>
+        {% endif %}
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}
